@@ -1,0 +1,25 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+<span> 
+<h1> Friends </h1>
+<div id = "fList" class = "fList">
+  <friend
+    v-for= "friend in friends"
+    v-bind:key = "friend._id"
+    v-bind:frdata = "friend"
+    >
+  </friend>
+  </div>
+</span>
+<span> 
+<h1> Details </h1>
+<div id = "details" class = "details">
+  <fd v-if="friend" :frdet ="friend"> </fd>
+  <p v-else> Please select </p> 
+</div>
+</span>
+
+<script src = "mvApp.js">
+</script>
